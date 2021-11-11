@@ -1,4 +1,4 @@
-const { EmptyTaskNameException } = require('../exceptions/taskExceptions');
+const { EmptyTaskException } = require('../exceptions/taskExceptions');
 
 class CreateTask {
   constructor(taskRepository) {
@@ -7,7 +7,7 @@ class CreateTask {
 
   execute(task) {
     if (!task.name) {
-      throw new EmptyTaskNameException();
+      throw new EmptyTaskException();
     }
 
     this.taskRepository.add(task);

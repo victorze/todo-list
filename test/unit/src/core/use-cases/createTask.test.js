@@ -1,7 +1,7 @@
 const { CreateTask } = require('../../../../../src/core/use-cases/createTask');
 const { Task } = require('../../../../../src/core/entities/task');
 const {
-  EmptyTaskNameException,
+  EmptyTaskException,
 } = require('../../../../../src/core/exceptions/taskExceptions');
 
 test('create task', () => {
@@ -17,9 +17,9 @@ test('create task', () => {
   expect(taskRepository.add.mock.calls[0][0]).toBe(task);
 });
 
-test('empty task exception', () => {
+test('empty task', () => {
   const createTask = new CreateTask({});
   const task = new Task('');
 
-  expect(() => createTask.execute(task)).toThrow(EmptyTaskNameException);
+  expect(() => createTask.execute(task)).toThrow(EmptyTaskException);
 });

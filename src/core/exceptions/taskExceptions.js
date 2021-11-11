@@ -1,5 +1,8 @@
-class EmptyTaskNameException extends Error {}
+class EmptyTaskException extends Error {}
+
+class TaskNotFoundException extends Error {}
 
 module.exports = {
-  EmptyTaskNameException,
+  EmptyTaskException,
+  TaskNotFoundException,
 };
