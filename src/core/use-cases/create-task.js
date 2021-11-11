@@ -5,12 +5,12 @@ class CreateTask {
     this.taskRepository = taskRepository;
   }
 
-  execute(task, user) {
+  execute(task, userId) {
     if (!task.name) {
       throw new EmptyTaskNameException();
     }
 
-    this.taskRepository.save(task, user);
+    this.taskRepository.save(task, userId);
     return task;
   }
 }
