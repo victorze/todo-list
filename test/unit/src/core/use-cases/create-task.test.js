@@ -19,11 +19,8 @@ test('create task', () => {
 });
 
 test('empty task exception', () => {
-  const user = {};
-  const taskRepository = {};
-  taskRepository.save = jest.fn((x) => x);
-  const createTask = new CreateTask(taskRepository);
+  const createTask = new CreateTask({});
   const task = new Task('');
 
-  expect(() => createTask.execute(task, user)).toThrow(EmptyTaskNameException);
+  expect(() => createTask.execute(task, {})).toThrow(EmptyTaskNameException);
 });
