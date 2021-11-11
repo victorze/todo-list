@@ -1,6 +1,6 @@
 const {
   ToggleDoneTask,
-} = require('../../../../../src/core/use-cases/toggle-done-task');
+} = require('../../../../../src/core/use-cases/toggleDoneTask');
 
 test('toggle done task', () => {
   const taskId = 1;

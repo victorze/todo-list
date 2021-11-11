@@ -1,8 +1,8 @@
-const { CreateTask } = require('../../../../../src/core/use-cases/create-task');
+const { CreateTask } = require('../../../../../src/core/use-cases/createTask');
 const { Task } = require('../../../../../src/core/entities/task');
 const {
   EmptyTaskNameException,
-} = require('../../../../../src/core/exceptions/task-exceptions');
+} = require('../../../../../src/core/exceptions/taskExceptions');
 
 test('create task', () => {
   const taskRepository = {};
