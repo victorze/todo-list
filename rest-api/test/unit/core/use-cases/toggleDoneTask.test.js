@@ -1,9 +1,7 @@
-const {
-  ToggleDoneTask,
-} = require('../../../../../core/use-cases/toggleDoneTask');
+const { ToggleDoneTask } = require('../../../../core/use-cases/toggleDoneTask');
 const {
   TaskNotFoundException,
-} = require('../../../../../core/exceptions/taskExceptions');
+} = require('../../../../core/exceptions/taskExceptions');
 
 test('toggle done task', () => {
   const taskId = 1;
