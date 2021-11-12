@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { app, server } = require('../../server/index');
+const { app, server } = require('../../src/rest-api/server');
 
 const api = request(app);
 

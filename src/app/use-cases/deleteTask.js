@@ -1,4 +1,4 @@
-const { TaskNotFoundException } = require('../exceptions/taskExceptions');
+const { TaskNotFoundException } = require('./exceptions/taskExceptions');
 
 class DeleteTask {
   constructor(taskRepository) {

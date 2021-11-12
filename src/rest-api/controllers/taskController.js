@@ -1,7 +1,9 @@
-const { Task } = require('../../core/entities/task');
-const { EmptyTaskException } = require('../../core/exceptions/taskExceptions');
-const { CreateTask } = require('../../core/use-cases/createTask');
-const taskRepository = require('../../services/repositories/taskRepository');
+const { Task } = require('../../app/domain/task');
+const {
+  EmptyTaskException,
+} = require('../../app/use-cases/exceptions/taskExceptions');
+const { CreateTask } = require('../../app/use-cases/createTask');
+const taskRepository = require('../../infrastructure/repositories/taskRepository');
 const { BadRequestError } = require('../httpErrors');
 
 const store = (req, res) => {

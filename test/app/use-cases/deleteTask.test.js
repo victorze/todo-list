@@ -1,7 +1,7 @@
-const { DeleteTask } = require('../../../../core/use-cases/deleteTask');
+const { DeleteTask } = require('../../../src/app/use-cases/deleteTask');
 const {
   TaskNotFoundException,
-} = require('../../../../core/exceptions/taskExceptions');
+} = require('../../../src/app/use-cases/exceptions/taskExceptions');
 
 test('delete task', () => {
   const taskId = 1;

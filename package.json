@@ -9,7 +9,7 @@
     "test": "PORT=4000 jest --verbose"
   },
   "keywords": [],
-  "author": "",
+  "author": "Victor",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
