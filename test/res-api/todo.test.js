@@ -3,9 +3,9 @@ const { app, server } = require('../../src/rest-api/server');
 
 const api = request(app);
 
-const basePath = '/api/todos';
+const basePath = '/api/todo';
 
-describe('todos', () => {
+describe('todo', () => {
   afterAll(() => {
     server.close();
   });
@@ -15,7 +15,7 @@ describe('todos', () => {
       const newTask = { name: 'foo' };
 
       const res = await api
-        .post('/api/todo')
+        .post(basePath)
         .send(newTask)
         .expect(201)
         .expect('Content-Type', /application\/json/);
@@ -28,7 +28,7 @@ describe('todos', () => {
       const newTask = { name: '' };
 
       await api
-        .post('/api/todo')
+        .post(basePath)
         .send(newTask)
         .expect(400)
         .expect('Content-Type', /application\/json/);
