@@ -1,4 +1,4 @@
-const { GetTasks } = require('../../../../../src/core/use-cases/getTasks');
+const { GetTasks } = require('../../../../../core/use-cases/getTasks');
 
 test('get tasks', () => {
   const taskRepository = {};
