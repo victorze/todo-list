@@ -1,6 +1,6 @@
-const { TaskNotFoundException } = require('./exceptions/taskExceptions');
+import { TaskNotFoundException } from './exceptions/taskExceptions.js';
 
-class ToggleDoneTask {
+export class ToggleDoneTask {
   constructor(taskRepository) {
     this.taskRepository = taskRepository;
   }
@@ -17,7 +17,3 @@ class ToggleDoneTask {
     return task;
   }
 }
-
-module.exports = {
-  ToggleDoneTask,
-};

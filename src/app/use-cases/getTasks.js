@@ -1,4 +1,4 @@
-class GetTasks {
+export class GetTasks {
   constructor(taskRepository) {
     this.taskRepository = taskRepository;
   }
@@ -7,7 +7,3 @@ class GetTasks {
     return this.taskRepository.getAll();
   }
 }
-
-module.exports = {
-  GetTasks,
-};

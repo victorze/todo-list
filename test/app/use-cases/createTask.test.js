@@ -1,8 +1,7 @@
-const { CreateTask } = require('../../../src/app/use-cases/createTask');
-const { Task } = require('../../../src/app/domain/task');
-const {
-  EmptyTaskException,
-} = require('../../../src/app/use-cases/exceptions/taskExceptions');
+import { jest } from '@jest/globals';
+import { CreateTask } from '../../../src/app/use-cases/createTask.js';
+import { Task } from '../../../src/app/domain/task.js';
+import { EmptyTaskException } from '../../../src/app/use-cases/exceptions/taskExceptions.js';
 
 test('create task', () => {
   const taskRepository = {};

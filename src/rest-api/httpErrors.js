@@ -1,4 +1,4 @@
-class BadRequestError extends Error {
+export class BadRequestError extends Error {
   constructor(message) {
     super(message);
     this.message = message || 'Bad Request';
@@ -6,7 +6,3 @@ class BadRequestError extends Error {
     this.name = 'BadRequestError';
   }
 }
-
-module.exports = {
-  BadRequestError,
-};

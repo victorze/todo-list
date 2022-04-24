@@ -4,6 +4,4 @@ const add = ({ name, done }) => {
   tasks.push({ name, done });
 };
 
-module.exports = {
-  add,
-};
+export default { add }

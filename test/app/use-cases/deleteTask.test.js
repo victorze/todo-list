@@ -1,7 +1,6 @@
-const { DeleteTask } = require('../../../src/app/use-cases/deleteTask');
-const {
-  TaskNotFoundException,
-} = require('../../../src/app/use-cases/exceptions/taskExceptions');
+import { jest } from '@jest/globals';
+import { DeleteTask } from '../../../src/app/use-cases/deleteTask.js'
+import { TaskNotFoundException } from '../../../src/app/use-cases/exceptions/taskExceptions.js';
 
 test('delete task', () => {
   const taskId = 1;

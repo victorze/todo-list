@@ -1,6 +1,6 @@
-const { EmptyTaskException } = require('./exceptions/taskExceptions');
+import { EmptyTaskException } from './exceptions/taskExceptions.js';
 
-class CreateTask {
+export class CreateTask {
   constructor(taskRepository) {
     this.taskRepository = taskRepository;
   }
@@ -14,7 +14,3 @@ class CreateTask {
     return task;
   }
 }
-
-module.exports = {
-  CreateTask,
-};

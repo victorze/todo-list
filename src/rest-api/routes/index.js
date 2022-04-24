@@ -1,8 +1,6 @@
-const express = require('express');
-const taskController = require('../controllers/taskController');
+import express from 'express';
+import taskController from '../controllers/taskController.js';
 
-const router = express.Router();
+export const router = express.Router();
 
 router.post('/todo', taskController.store);
-
-module.exports = router;

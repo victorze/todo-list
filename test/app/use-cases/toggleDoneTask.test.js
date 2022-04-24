@@ -1,7 +1,6 @@
-const { ToggleDoneTask } = require('../../../src/app/use-cases/toggleDoneTask');
-const {
-  TaskNotFoundException,
-} = require('../../../src/app/use-cases/exceptions/taskExceptions');
+import { jest } from '@jest/globals';
+import { ToggleDoneTask } from '../../../src/app/use-cases/toggleDoneTask.js';
+import { TaskNotFoundException } from '../../../src/app/use-cases/exceptions/taskExceptions.js';
 
 test('toggle done task', () => {
   const taskId = 1;

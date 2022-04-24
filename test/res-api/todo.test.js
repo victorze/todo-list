@@ -1,7 +1,7 @@
-const request = require('supertest');
-const { app, server } = require('../../src/rest-api/server');
+import supertest from 'supertest';
+import { app, server } from '../../src/rest-api/server.js';
 
-const api = request(app);
+const api = supertest(app);
 
 const basePath = '/api/todo';
 

@@ -1,4 +1,5 @@
-const { GetTasks } = require('../../../src/app/use-cases/getTasks');
+import { jest } from '@jest/globals';
+import { GetTasks } from '../../../src/app/use-cases/getTasks.js';
 
 test('get tasks', () => {
   const taskRepository = {};

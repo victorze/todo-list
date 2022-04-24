@@ -1,10 +1,8 @@
-const { Task } = require('../../app/domain/task');
-const {
-  EmptyTaskException,
-} = require('../../app/use-cases/exceptions/taskExceptions');
-const { CreateTask } = require('../../app/use-cases/createTask');
-const taskRepository = require('../../infrastructure/repositories/taskRepository');
-const { BadRequestError } = require('../httpErrors');
+import { Task } from '../../app/domain/task.js';
+import { EmptyTaskException } from '../../app/use-cases/exceptions/taskExceptions.js';
+import { CreateTask } from '../../app/use-cases/createTask.js';
+import taskRepository from '../../infrastructure/repositories/taskRepository.js';
+import { BadRequestError } from '../httpErrors.js';
 
 const store = (req, res) => {
   const { name } = req.body;
@@ -22,6 +20,4 @@ const store = (req, res) => {
   res.status(201).json(task);
 };
 
-module.exports = {
-  store,
-};
+export default { store }

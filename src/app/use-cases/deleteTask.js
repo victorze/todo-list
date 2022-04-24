@@ -1,6 +1,6 @@
-const { TaskNotFoundException } = require('./exceptions/taskExceptions');
+import { TaskNotFoundException } from './exceptions/taskExceptions.js';
 
-class DeleteTask {
+export class DeleteTask {
   constructor(taskRepository) {
     this.taskRepository = taskRepository;
   }
@@ -15,7 +15,3 @@ class DeleteTask {
     return this.taskRepository.remove(taskId);
   }
 }
-
-module.exports = {
-  DeleteTask,
-};
